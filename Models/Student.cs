@@ -5,5 +5,6 @@ namespace NNS0709.Models
         public int StudentID { get; set; }
         public string StudentName { get; set; }
         public int StudentAge { get; set; }
+        public string StudentEmail { get; set; }
     }
 }

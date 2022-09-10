@@ -13,9 +13,10 @@ public class StudentController : Controller
         _logger = logger;
     }
     [HttpPost]
-    public IActionResult Index(String StudentName)
+    public IActionResult Index(Student std)
     {
-        ViewBag.name = "Hello" + StudentName;
+        std.StudentName = "Tin Hoc Kinh Te";
+        ViewBag.mess = std.StudentID;
         return View();
     }
 

@@ -1,11 +1,14 @@
-@{
-    ViewData["Title"] = "Home Page";
-}
-<h2>ViewHome/Index</h2>
+<h2>Thong Tin Sinh Vien:</h2>
 <form asp-action="Index">
-    <label>Enter Your Name</label>
-    <input type="text" name="Fullname" placeholder="Enter Your Name">
-    <input type="email" name="Email" placeholder="Enter Your Email">
-    <button type="submit">Save</button>
+    <label>StudentID:</label>
+    <input type = "number" name = "StudentID">
+    <br>
+    <label>StudentName:</label>
+    <input type="text" name="StudentName" placeholder="Enter Your Name">
+    <br>
+    <label>StudentEmail:</label>
+    <input type="email" name="StudentEmail" placeholder="Enter Your Email">
+    <br>
+    <button type="submit" style = "color: gray;">Save</button>
 </form>
 <h2>@ViewBag.name</h2>

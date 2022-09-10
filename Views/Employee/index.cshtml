@@ -1,0 +1,28 @@
+<div class="employee">
+    <div style="float: left; margin: 50px 0 0 60px;">
+    <h2>Nhập Thông Tin</h2>
+    <form asp-action="Index">
+    <label for="ID">ID:</label>
+        <br></brf><input type="number" name="EmployeeID" placeholder="ID"><br>
+    <label for="name">Name:</label>
+        <br><input type="text" name="EmployeeName" placeholder="Enter Your Name"><br>
+    <label for="age">Age:</label>
+        <br><input type="text" name="EmployeeAge" placeholder="Your Age"><br>
+    <label for="phone">Phone:</label>
+        <br><input type="text" name="EmployeePhone" placeholder="Your Phone"><br>
+    <label for="address">Address:</label>
+        <br><input type="text" name="EmployeeAddress" placeholder="Your Address"><br><br>
+        <button type="submit">Show</button>
+    </form>
+</div>
+<div style="float:right; margin: 50px 60px 0 0;">
+    <ul>
+        <h2>Thông tin nhân viên</h2><br>
+        <li>EmployeeID:&nbsp;&nbsp;@ViewBag.ID</li>
+        <li>EmployeeName:&nbsp;&nbsp;@ViewBag.Name</li>
+        <li>EmployeeAge:&nbsp;&nbsp;@ViewBag.Age</li>
+        <li>EmployeePhone:&nbsp;&nbsp;@ViewBag.Phone</li>
+        <li>EmployeeAddress:&nbsp;&nbsp;@ViewBag.Address</li>
+    </ul>
+</div>
+</div>
