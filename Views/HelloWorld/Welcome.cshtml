@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<h2>Welcome To My Book Store</h2>
+
+<ul>
+    @for (int i = 0; i < (int)ViewData["NumTimes"]!; i++)
+    {
+        <li>@ViewData["Message"]</li>
+    }
+</ul>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security

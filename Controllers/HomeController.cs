@@ -16,7 +16,7 @@ public class HomeController : Controller
 
     public IActionResult Index(String FullName, String Email)
     {
-        ViewBag.name = "Hello:" + " " + FullName + " " + Email;
+        ViewBag.name = "Cập Nhật Thông Tin:" + " " + FullName + " " + Email;
         return View();
     }
 

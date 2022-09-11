@@ -13,7 +13,12 @@ public class EmployeeControllers : Controller
     {
         _logger = logger;
     }
-
+    public IActionResult Index()
+    {
+        return View();
+    }
+    
+    [HttpPost]
     public IActionResult Index(Employee std)
     {
         int ID = std.EmployeeID;

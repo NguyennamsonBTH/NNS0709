@@ -12,10 +12,15 @@ public class StudentController : Controller
     {
         _logger = logger;
     }
+    public IActionResult Index()
+    {
+        return View();
+    }
+    
     [HttpPost]
     public IActionResult Index(Student std)
     {
-        std.StudentName = "Tin Hoc Kinh Te";
+        std.StudentName = "Tin Học Kinh Tế";
         ViewBag.mess = std.StudentID;
         return View();
     }

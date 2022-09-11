@@ -13,7 +13,7 @@ public class HelloWorldController : Controller
         // Requires using System.Text.Encodings.Web;
         public IActionResult Welcome(string name, int numTimes = 1)
         {
-            ViewData["Message"] = "Hello " + name;
+            ViewData["Message"] = "Cập Nhật Thông Tin " + name;
             ViewData["NumTimes"] = numTimes;
 
             return View();
