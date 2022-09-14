@@ -1,0 +1,18 @@
+<h2>Thông Tin Sinh Viên:</h2>
+<form asp-action="Create" method="post">
+    <label>Student ID:</label>
+    <input type="number" name="Student ID">
+    <br>
+    <label>Student Name:</label>
+    <input type="text" name="StudentName" placeholder="Enter Your Name">
+    <br>
+    <label>Student Email:</label>
+    <input type="email" name="StudentEmail" placeholder="Enter Your Email">
+    <br>
+    <br>
+    <label>Student Age:</label>
+    <input type="number" name="StudentAge" placeholder="Enter Your Age">
+    <br>
+    <a href="Create.cshtml"><button type="submit" style="color: Black;">Save</button></a>
+</form>
+<h2>@ViewBag.name</h2>

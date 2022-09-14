@@ -1,14 +1,28 @@
-<h2>Thông Tin Sinh Viên:</h2>
-<form asp-action="Index">
-    <label>Student ID:</label>
-    <input type="number" name="Student ID">
-    <br>
-    <label>Student Name:</label>
-    <input type="text" name="StudentName" placeholder="Enter Your Name">
-    <br>
-    <label>Student Email:</label>
-    <input type="email" name="StudentEmail" placeholder="Enter Your Email">
-    <br>
-    <button type="submit" style="color: Black;">Save</button>
-</form>
-<h2>@ViewBag.name</h2>
+<h2>Danh Sách Sinh Viên</h2>
+<hr>
+<table class="table border">
+    <tr>
+        <tr>
+            <laber>ID</laber>
+        </tr>
+        <tr>
+            <label>Name</label>
+        </tr>
+        <tr>
+            <laber>Email</laber>
+        </tr>
+        <tr>
+            <laber>Age</laber>
+        </tr>
+    </tr>
+@foreach (var item in ViewData["Student"] as List<Student>)
+{
+    <tr>
+        <td>@item.StudentID</td>
+        <td>@item.StudentName</td>
+        <td>@item.StudentEmail</td>
+        <td>@item.StudentAge</td>
+    </tr>
+}
+</table>
+</hr>

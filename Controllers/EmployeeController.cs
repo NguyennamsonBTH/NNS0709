@@ -2,22 +2,24 @@ using System.Reflection.Metadata.Ecma335;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using NNS0709.Models;
-
-namespace NNS0709.Controllers;
-
-public class EmployeeControllers : Controller
+namespace NNS0709.Controllers
 {
-    private readonly ILogger<EmployeeControllers> _logger;
-
-    public EmployeeControllers(ILogger<EmployeeControllers> logger)
+  public class EmployeeController : Controller 
+  {
+    public ActionResult Index()
     {
-        _logger = logger;
-    }
-    public IActionResult Index()
-    {
+        List<Employee> StdList= new List<Employee>
+        { 
+            new Employee { EmployeeID = 121, EmployeeName = "Alpha", EmployeeAge = 16 },
+            new Employee { EmployeeID = 122, EmployeeName = "Beta",  EmployeeAge = 17 },
+            new Employee { EmployeeID = 132, EmployeeName = "Ceita", EmployeeAge = 18 },
+            new Employee { EmployeeID = 134, EmployeeName = "Delta", EmployeeAge = 19 },
+            new Employee { EmployeeID = 155, EmployeeName = "Elpha", EmployeeAge = 20 }
+        };
+         ViewData["Employee"] = StdList;
         return View();
     }
-    
+
     [HttpPost]
     public IActionResult Index(Employee std)
     {
@@ -33,15 +35,16 @@ public class EmployeeControllers : Controller
         ViewBag.Age = std.EmployeeAge;
         return View();
     }
-
-    public IActionResult Privacy()
+    [HttpGet]
+    public IActionResult Create()
     {
         return View();
     }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    [HttpPost]
+    public IActionResult Create(Employee std)
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+       ViewBag.thongtinNhanVien = std.EmployeeID+ "-" + std.EmployeeName+ "-" + std.EmployeeAge;
+        return View();
     }
+   }
 }
